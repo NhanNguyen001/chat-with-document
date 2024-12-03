@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-colors duration-200 ease-in-out;
+  }
+  
+  .btn-primary {
+    @apply btn bg-blue-500 text-white hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .btn-danger {
+    @apply btn bg-red-500 text-white hover:bg-red-600;
+  }
+  
+  .input {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200;
+  }
+  
+  .menu-item {
+    @apply px-4 py-2 rounded-md transition-colors duration-200 font-medium;
+  }
+  
+  .menu-item-active {
+    @apply bg-blue-500 text-white hover:bg-blue-600;
+  }
+  
+  .menu-item-inactive {
+    @apply text-gray-700 hover:bg-gray-100;
+  }
+  
+  .message {
+    @apply px-4 py-2 rounded-lg max-w-[80%] mb-4;
+  }
+  
+  .message-user {
+    @apply message bg-blue-500 text-white ml-auto rounded-br-none animate-slide-in-left;
+  }
+  
+  .message-bot {
+    @apply message bg-gray-100 text-gray-800 mr-auto rounded-bl-none animate-slide-in-right;
+  }
+
+  .chat-container {
+    @apply h-[600px] bg-white rounded-lg shadow-sm p-6 mb-6 overflow-y-auto;
+  }
+
+  .chat-input-container {
+    @apply bg-white rounded-lg shadow-sm p-4 flex space-x-4;
+  }
+
+  .nav-container {
+    @apply bg-white shadow-sm rounded-lg mb-6;
+  }
+
+  .nav-content {
+    @apply flex justify-between items-center p-4;
+  }
+
+  .nav-title {
+    @apply text-xl font-bold text-gray-800;
+  }
+
+  .nav-buttons {
+    @apply flex items-center space-x-4;
+  }
+}
+
+body {
+  @apply m-0 bg-gray-50 text-gray-900 antialiased;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+#root {
+  @apply min-h-screen;
+}
