@@ -97,7 +97,8 @@ class DocumentChatbot:
 
     def setup_chain(self):
         # Initialize language model
-        llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0)
+        # llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0)
+        llm = ChatOpenAI(model_name="gpt-4o", temperature=0)
 
         # Setup memory
         self.memory = ConversationBufferMemory(
